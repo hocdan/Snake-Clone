@@ -31,7 +31,7 @@ class Tutorial(State):
 
     def update(self, game):
         #checando se usuario deseja voltar ao menu
-        if (pyxel.btn(pyxel.KEY_M)):
+        if (pyxel.btn(pyxel.KEY_M) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_B)):
             return "menu"
 
     def draw(self, game):
