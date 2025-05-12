@@ -19,9 +19,9 @@ class Fase1(State):
 
     def onEnter(self, game):
         pyxel.mouse(True)
-        pyxel.load("/home/hacdan/Documents/Linux/Programacao/Python/Projetos/Pyxel/SNAKE_1.0/Assets/snake.pyxres")
+        pyxel.load("Assets/snake.pyxres")
         #carregando fonte das letras
-        self.fonte = pyxel.Font("/home/hacdan/Documents/Linux/Programacao/Python/Projetos/Pyxel/SNAKE_1.0/Fonts/VictoriaBold-8.bdf")
+        self.fonte = pyxel.Font("Fonts/VictoriaBold-8.bdf")
 
         #carregando componentes do jogo (mundo e jogador)
         self.player = Snake(8, 24, 0, 16, 0, 8, 8, 8, vidas=5, pontos=100)
