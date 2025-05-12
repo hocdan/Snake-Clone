@@ -56,7 +56,7 @@ class Menu(State):
     def draw(self, game):
         pyxel.cls(0) #limpando tela
         #desenhando menu
-        pyxel.text(50, 10, "MENU", pyxel.COLOR_WHITE, self.fonte)
+        pyxel.text(50, 10, "MENU - MAE DE CLEITON", pyxel.COLOR_WHITE, self.fonte)
         pyxel.rect(self.recJogar[0], self.recJogar[1], self.recJogar[2], self.recJogar[3], self.recJogar[4])
         pyxel.text(self.recJogar[0]+10, self.recJogar[1]+8, "JOGAR", pyxel.COLOR_WHITE)
         pyxel.rect(self.recTutorial[0], self.recTutorial[1], self.recTutorial[2], self.recTutorial[3], self.recTutorial[4])
