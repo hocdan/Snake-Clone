@@ -47,7 +47,7 @@ class Fase1(State):
             if ( self.world.checkCollision(self.INPUT) == "invalido"):
                 self.INPUT = self.world.SNAKE.corpo[0].direcao #restaurando direcao valida
             #atualizando mudanca de movimento a cada 0.5 segundos
-            if (pyxel.frame_count%32 == 0):
+            if (pyxel.frame_count%20 == 0):
                 if ( self.world.checkCollision(self.INPUT) == "comida"):
                     self.world.grow()
                     if (self.world.checkCollision(self.INPUT) not in ["tijolo", "caixa", "corpo", "gelo", "invalido"]):
