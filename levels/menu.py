@@ -20,7 +20,7 @@ class Menu(State):
         pyxel.mouse(True)
         
         #carregando fonte das letras
-        self.fonte = pyxel.Font("/home/hacdan/Documents/Linux/Programacao/Python/Projetos/Pyxel/SNAKE_1.0/Assets/Fonts/VictoriaBold-8.bdf")
+        self.fonte = pyxel.Font("Assets/Fonts/VictoriaBold-8.bdf")
         
         #declarando e inicializando retangulos do menu (para colisao e display de mensagens)
         self.recJogar = [45, 35, 40, 20, pyxel.COLOR_GREEN]
