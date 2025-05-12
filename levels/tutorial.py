@@ -18,7 +18,7 @@ class Tutorial(State):
         #inicializando janela
         pyxel.mouse(True)
         #carregando icones do jogo
-        pyxel.load("/home/hacdan/Documents/Linux/Programacao/Python/Projetos/Pyxel/SNAKE_1.0/Assets/snake.pyxres")
+        pyxel.load("Assets/snake.pyxres")
 
         #declarando e inicializando retangulos do tutorial (bordas dos icones por categoria)
         self.rectangles = [[15, 15, 26, 26, pyxel.COLOR_GRAY, False],
