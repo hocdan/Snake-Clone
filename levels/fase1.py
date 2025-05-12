@@ -50,6 +50,7 @@ class Fase1(State):
             if (pyxel.frame_count%20 == 0):
                 if ( self.world.checkCollision(self.INPUT) == "comida"):
                     self.world.grow()
+                    self.player.pontos += 200
                     if (self.world.checkCollision(self.INPUT) not in ["tijolo", "caixa", "corpo", "gelo", "invalido"]):
                         self.player.move(self.INPUT, LARGURA_JANELA, ALTURA_JANELA)
                 elif ( self.world.checkCollision(self.INPUT) == "fogo"):
