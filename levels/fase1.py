@@ -47,7 +47,7 @@ class Fase1(State):
             if ( self.world.checkCollision(self.INPUT) == "invalido"):
                 self.INPUT = self.world.SNAKE.corpo[0].direcao #restaurando direcao valida
             #atualizando mudanca de movimento a cada 0.5 segundos
-            if (pyxel.frame_count%20 == 0):
+            if (pyxel.frame_count%32 == 0):
                 if ( self.world.checkCollision(self.INPUT) == "comida"):
                     self.world.grow()
                     if (self.world.checkCollision(self.INPUT) not in ["tijolo", "caixa", "corpo", "gelo", "invalido"]):
@@ -80,7 +80,7 @@ class Fase1(State):
                 #devolvendo controle para carregar arquivo "menu.py"
                 return "menu"
         #chance de gerar comidas randomicas a cada 10 segundos em locais vazios do mapa
-        if (pyxel.frame_count%640 == 0):
+        if (pyxel.frame_count%320 == 0):
             posXrandom = random.randint(0, 127)
             posYrandom = random.randint(0, 127)
             self.world.addItem(posXrandom, posYrandom, WorldItem_SNAKE.COMIDA)
