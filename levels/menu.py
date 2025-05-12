@@ -21,10 +21,10 @@ class Menu(State):
         pyxel.mouse(True)
         
         #carregando icones do jogo
-        pyxel.load("/home/hacdan/Documents/Linux/Programacao/Python/Projetos/Pyxel/SNAKE_1.0/Assets/snake.pyxres")
+        pyxel.load("Assets/snake.pyxres")
 
         #carregando fonte das letras
-        self.fonte = pyxel.Font("/home/hacdan/Documents/Linux/Programacao/Python/Projetos/Pyxel/SNAKE_1.0/Assets/Fonts/VictoriaBold-8.bdf")
+        self.fonte = pyxel.Font("Assets/Fonts/VictoriaBold-8.bdf")
         
         #declarando tilemap para decoracao da tela tutorial
         self.decoration = world.World_SNAKE(pyxel.tilemaps[2], 16, 17, 8)
