@@ -52,5 +52,5 @@ class Tutorial(State):
         pyxel.text(58, 74, "Life (get)", pyxel.COLOR_WHITE)
         pyxel.text(58, 82, "Fire (avoid)", pyxel.COLOR_WHITE)
         pyxel.text(58, 98, "Points (get)", pyxel.COLOR_WHITE)
-        pyxel.text(25, 113, "<- Press M to return", pyxel.COLOR_WHITE)
+        pyxel.text(25, 113, "<- Press M to return!", pyxel.COLOR_WHITE)
         
