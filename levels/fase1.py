@@ -35,13 +35,13 @@ class Fase1(State):
             self.GAME_OVER = True
         if (not self.GAME_OVER):
             #checando constantemente input do usuario, caso jogo nao tenha finalizado
-            if (pyxel.btn(pyxel.KEY_W) or pyxel.btn(pyxel.KEY_UP)):
+            if (pyxel.btn(pyxel.KEY_W) or pyxel.btn(pyxel.KEY_UP) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_UP)):
                 self.INPUT = 'w'
-            elif (pyxel.btn(pyxel.KEY_A) or pyxel.btn(pyxel.KEY_LEFT)):
+            elif (pyxel.btn(pyxel.KEY_A) or pyxel.btn(pyxel.KEY_LEFT) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_LEFT)):
                 self.INPUT = 'a'
-            elif (pyxel.btn(pyxel.KEY_S) or pyxel.btn(pyxel.KEY_DOWN)):
+            elif (pyxel.btn(pyxel.KEY_S) or pyxel.btn(pyxel.KEY_DOWN) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_DOWN)):
                 self.INPUT = 's'
-            elif (pyxel.btn(pyxel.KEY_D) or pyxel.btn(pyxel.KEY_RIGHT)):
+            elif (pyxel.btn(pyxel.KEY_D) or pyxel.btn(pyxel.KEY_RIGHT) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_RIGHT)):
                 self.INPUT = 'd'
             #checando movimentos invalidos e nao deixando valor ser repassado na atualizacao
             if ( self.world.checkCollision(self.INPUT) == "invalido"):
@@ -70,13 +70,13 @@ class Fase1(State):
                     self.player.vidas -= 1
         else:
             #checando se usuario ira querer reiniciar jogo
-            if (pyxel.btn(pyxel.KEY_R)):
+            if (pyxel.btn(pyxel.KEY_R) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_A)):
                 #carregando componentes do jogo (mundo e jogador)
                 self.player = Snake(8, 24, 0, 16, 0, 8, 8, 8, vidas=3, pontos=0)
                 self.world = World_SNAKE(pyxel.tilemaps[0], 16, 16, 8, self.player)
                 self.INPUT = 's' #flag de controle para a direcao passiva da cobra
                 self.GAME_OVER = False 
-            elif (pyxel.btn(pyxel.KEY_M)):
+            elif (pyxel.btn(pyxel.KEY_M) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_B)):
                 #devolvendo controle para carregar arquivo "menu.py"
                 return "menu"
         #chance de gerar comidas randomicas a cada 10 segundos em locais vazios do mapa
